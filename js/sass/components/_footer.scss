@@ -1,0 +1,103 @@
+.footer__section {
+    padding-top: 60px;
+    padding-bottom: 0px;
+    background-color: $third-background-color;
+    min-height: 138px;
+  }
+.footer__column{
+    display: flex;
+    padding-bottom: 60px;   
+}
+.footer__address{
+    font-style: normal;
+    & p {
+        margin-top: 0;
+        margin-bottom: 9px;
+        color: $primary-white-color;
+        font-style: normal;
+      }
+    &.footer__address-link {
+        color: $footer-text-color;
+        font-style: normal;
+        list-style: none;
+        text-decoration: none;
+      }
+}
+.footer__logo{
+    margin-bottom: 20px;
+    font-style: normal;
+    list-style: none;
+}
+.footer__link{
+    text-decoration: none;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $primary-white-color;
+
+}
+.footer__address-list{
+    list-style: none;
+    color:$primary-text-color ;
+    margin: 0;
+    padding: 0;
+}
+.footer__address-link{
+    text-decoration: none;
+    color:$primary-text-color ;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+        color: $accent-color;
+    }
+}
+.footer__address-list-item{
+    &:not(:last-child) {
+        margin-bottom: 9px;
+      }
+}
+.you-are-welcome {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0;
+    min-width: 206px;
+    margin-left: 70px;
+    margin-right: 93px;
+    margin-top: 10px;
+}
+.you-are-welcome__title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+.actions-footer {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.actions-footer__icons{
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    fill: $primary-white-color;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+        }
+}
+
+
