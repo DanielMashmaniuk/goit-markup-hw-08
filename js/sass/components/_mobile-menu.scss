@@ -21,6 +21,10 @@
       padding-left: 40px;
       display: non;
   }}
+.is-hidden{
+    transform: translateX(0); 
+    
+}
 .menu__container {
     position: fixed;
     background-color: #fff;
@@ -38,10 +42,7 @@
     z-index: 55;
     transform: translateX(400%);
     transition: transform 250ms ease-in-out;}
-.is-hidden{
-    transform: translateX(0); 
-    
-}
+
 .menu__close {
         position: absolute;
         border: none;

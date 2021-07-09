@@ -1,9 +1,35 @@
+@media screen and (max-width: 767px){
+.footer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
 .footer__section {
     padding-top: 60px;
     padding-bottom: 0px;
     background-color: $third-background-color;
     min-height: 138px;
   }
+@media screen and (max-width: 767px){
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+}
+@media screen and (min-width: 1200px){
+  .footer__container{
+      display: flex;
+  }
+}
 .footer__column{
     display: flex;
     padding-bottom: 60px;   
@@ -22,6 +48,20 @@
         list-style: none;
         text-decoration: none;
       }
+}
+@media screen and (max-width: 767px){
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+.footer__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 .footer__logo{
     margin-bottom: 20px;
@@ -67,6 +107,23 @@
     margin-right: 93px;
     margin-top: 10px;
 }
+@media screen and (max-width: 767px){
+.you-are-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+.you-are-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+}
 .you-are-welcome__title{
   font-style: normal;
   font-weight: bold;
@@ -99,5 +156,34 @@
         background-color: $accent-color;
         }
 }
-
-
+.footer__subscription {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+}
+@media screen and (max-width: 767px){
+.footer__subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+.footer__subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+}
+@media screen and (min-width: 1200px){
+.footer__subscription {
+    margin-left: 93px;
+    margin-top: 12px;
+}
+}

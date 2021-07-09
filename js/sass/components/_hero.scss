@@ -25,20 +25,60 @@
         background-color: $hover-button-color;
       }
   }
+
+  .hero  {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)),url(../../../images/header-mob-1px.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 480px 400px;
+    background-color: $third-background-color;}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .hero {
+        text-align: center;
+        padding-top: 118px;
+        padding-bottom: 118px;
+        background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)),url(../../../images/header-tab-1px.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 768px 400px;
+}
+}
+@media not all, screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx){
 .hero {
+    text-align: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)),url(../../../images/header-tab-2px.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 768px 400px;
+}
+}
+@media screen and (min-width: 1200px){
+.hero {
+    text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    text-align: center;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient( 
-      to right, $bgr-overlay, $bgr-overlay ),
-     url(../images/background-img-hero.jpg);
+    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)),url(../../../images/header-desc-1px.jpg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+    background-position: 50% 50%;
+    background-size: 1600px 600px;
+}
+}
+@media not all, screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx){
+.hero {
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47,48,58,0.4), rgba(47,48,58,0.4)),url(../../../images/header-desc-2px.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 1600px 600px;
+}
+}
 .hero__button {
     padding: 10px 32px;
     border: 1px solid transparent;
@@ -63,6 +103,19 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:$primary-white-color;
+  }
+  @media screen and (min-width: 1200px){
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
   }
 .hero__button {
     padding: 10px 32px;
