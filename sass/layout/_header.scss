@@ -1,0 +1,328 @@
+.header {
+  border-bottom: 1px solid $border-color;
+}
+
+.header-container {
+  position: relative;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    height: 80px;
+  }
+
+  &.is-hidden {
+    @media screen and (max-width: 767px) {
+      width: 100vw;
+      max-width: none;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  width: 100%;
+
+  @media screen and(max-width: 767px) {
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity $transition-duration $transition-timing-function;
+  }
+  @media screen and(min-width: 768px) {
+    position: static;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.menu.is-hidden {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  width: 100%;
+  height: 100vh;
+  background-color: $white-color;
+  z-index: 999;
+  opacity: 1;
+  pointer-events: auto;
+  overflow: visible;
+}
+
+.header__logo {
+  @include font(24px, 1.172, 0.03em, 700);
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: $black-color;
+
+  @media screen and(min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include font(26px, 1.192, 0.03em, 700);
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
+}
+
+.header__logo--accent-color {
+  color: $accent-color;
+}
+
+.menu-mobile__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  &:hover .menu-mobile__icon,
+  &:focus .menu-mobile__icon,
+  &:active .menu-mobile__icon {
+    fill: $accent-color;
+  }
+  @media screen and(min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-mobile__icon {
+  @include icons(40px, 40px);
+}
+
+.nav-list {
+  @media screen and(min-width: 768px) {
+    display: flex;
+  }
+}
+
+.site-list {
+  @include font(40px, 1.172, 0.02em, 500);
+  color: $title-text-color;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    @include font(14px, 1.172, 0.02em, 500);
+  }
+}
+
+.site-list__item {
+  @media screen and(min-width: 768px) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+.site-list__link {
+  display: block;
+  color: $title-text-color;
+  margin-bottom: 32px;
+  color: $title-text-color;
+  transition: color $transition-duration $transition-timing-function;
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &::after {
+      position: absolute;
+      left: 0%;
+      bottom: 0%;
+
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+
+      opacity: 0;
+      transform: scalex(0);
+      transform-origin: center left;
+      transition: opacity $transition-duration $transition-timing-function,
+        transform $transition-duration $transition-timing-function;
+    }
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      opacity: 1;
+      transform: scalex(1);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+  }
+}
+
+.site-list__link--current {
+  position: relative;
+  color: $accent-color;
+  &::after {
+    opacity: 1;
+    transform: scalex(1);
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: auto;
+  @include font(18px, 1.172, 0.02em, 500, left);
+
+  @media screen and(min-width: 480px) {
+    @include font(24px, 1.172, 0.02em, 500, left);
+  }
+
+  @media screen and(min-width: 768px) {
+    @include font(12px, 1.172, 0.02em, 500, left);
+    flex-direction: column;
+    margin-top: 0px;
+    margin-left: auto;
+  }
+
+  @media screen and(min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+
+.contact-list__tel {
+  @include font(26px, 1.172, 0.02em, 500, left);
+  color: $accent-color;
+  margin-bottom: 32px;
+
+  @media screen and(min-width: 480px) {
+    @include font(34px, 1.172, 0.02em, 500, left);
+  }
+  @media screen and(min-width: 768px) {
+    color: currentColor;
+    @include font(12px, 1.172, 0.02em, 500, left);
+    color: currentColor;
+    padding-bottom: 21px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
+  @media screen and(min-width: 1200px) {
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.contact-list__mail {
+  color: currentColor;
+
+  @media screen and(min-width: 768px) {
+    padding-top: 21px;
+  }
+  @media screen and(min-width: 1200px) {
+    padding-top: 0px;
+  }
+}
+
+.contact-list__link {
+  display: block;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    align-items: center;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $accent-color;
+    }
+  }
+  @media screen and(min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contact-list__e-mail-icon,
+.contact-list__smartphone-icon {
+  display: none;
+  @media screen and(min-width: 768px) {
+    display: inline-block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.contact-list__e-mail-icon {
+  @media screen and(min-width: 768px) {
+    @include icons(14px, 10px);
+  }
+  @media screen and(min-width: 1200px) {
+    @include icons(16px, 12px);
+  }
+}
+
+.contact-list__smartphone-icon {
+  @media screen and(min-width: 768px) {
+    @include icons(10px, 14px);
+  }
+  @media screen and(min-width: 1200px) {
+    @include icons(10px, 16px);
+  }
+}
+
+.header-social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-social__item {
+  display: flex;
+  align-items: center;
+  @include font(10px, 1.222, 0.02em, 500, left);
+
+  @media screen and(min-width: 480px) {
+    @include font(18px, 1.222, 0.02em, 500, left);
+  }
+
+  &:not(:first-child):before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 22px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    background-color: $accent-color;
+  }
+}
+
+.header-social__link {
+  color: $accent-color;
+}
