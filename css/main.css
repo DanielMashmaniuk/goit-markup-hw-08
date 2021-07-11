@@ -443,7 +443,7 @@ p {
 
 @media screen and (min-width: 768px) {
   .contact-list {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.172;
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -485,7 +485,7 @@ p {
 @media screen and (min-width: 768px) {
   .contact-list__tel {
     color: currentColor;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.172;
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -1269,8 +1269,15 @@ p {
 .portfolio-filters-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: -15px;
   margin-left: -8px;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-filters-list {
+    justify-content: flex-start;
+  }
 }
 
 .portfolio-filters-list__item {
@@ -1564,9 +1571,9 @@ p {
 }
 
 .modal-form__label-checkbox {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.714;
-  letter-spacing: 0.03em;
+  letter-spacing: 400;
   font-weight: 400;
   text-align: left;
   display: block;

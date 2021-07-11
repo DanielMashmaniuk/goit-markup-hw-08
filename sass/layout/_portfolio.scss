@@ -11,10 +11,16 @@
 .portfolio-filters-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   margin-bottom: -15px;
   margin-left: -8px;
+  @media screen and (max-width: 768px) {
+  justify-content: flex-start;
+  }
 }
+
+  
 
 .portfolio-filters-list__item {
   margin-left: 8px;

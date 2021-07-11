@@ -200,7 +200,7 @@
   }
 
   @media screen and(min-width: 768px) {
-    @include font(12px, 1.172, 0.02em, 500, left);
+    @include font(14px, 1.172, 0.02em, 500, left);
     flex-direction: column;
     margin-top: 0px;
     margin-left: auto;
@@ -223,7 +223,7 @@
   }
   @media screen and(min-width: 768px) {
     color: currentColor;
-    @include font(12px, 1.172, 0.02em, 500, left);
+    @include font(14px, 1.172, 0.02em, 500, left);
     color: currentColor;
     padding-bottom: 21px;
     padding-top: 10px;
